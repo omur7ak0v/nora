@@ -1,13 +1,641 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>nora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hours.css">
+    <link rel="shortcut icon" href="icon/icon.png" type="image/png" >
+
+    <title>«Абдыкадыр Орозбеков» № 9 - орто мектеби | Баткен облусу, Кадамжай району</title>
+    <script src="/js/script.js"></script>
+
 </head>
-<body>
-    <p>nora=git </p>
+<body onload="initClock()">
+
+    <!-- SPRITE -->
+    <svg style="display: none;">
+
+
+        <!-- 1-bolum-->
+        
+        <symbol id="mektep" viewBox="0 0 455 455" >
+            <g>
+                <path d="M318.006,108.32V40.864L227.5,0l-90.158,40.864v67.457H0V455h122.342V303.32h210.664V455H455V108.32H318.006z M207.342,93.32h40.664v30h-40.664V93.32z M405,263.32H50v-30h355V263.32z M405,193.32H50v-30h355V193.32z"/>
+            </g>
+        </symbol>
+
+        <!-- 2-bolum-->
+        
+        <symbol id="okuuchu" viewBox="0 0 448 448" >
+            <g>
+                <path d="m176 192c0 13.253906-10.746094 24-24 24s-24-10.746094-24-24 10.746094-24 24-24 24 10.746094 24 24zm0 0"/><path d="m184 256h-64c-13.253906 0-24 10.746094-24 24v40h112v-40c0-13.253906-10.746094-24-24-24zm0 0"/><path d="m448 400h-173.695312l-23.90625 16h-53.054688l-23.742188-16h-173.601562v24c0 13.253906 10.746094 24 24 24h400c13.253906 0 24-10.746094 24-24zm0 0"/><path d="m16 384h162.480469l23.75 16h43.371093l23.863282-16h162.535156v-240.710938c-5.011719 4.273438-10.363281 8.128907-16 11.535157v213.175781h-384v-248h187.585938c-3.046876-5.046875-5.53125-10.414062-7.410157-16h-172.175781c-13.253906 0-24 10.746094-24 24zm0 0"/><path d="m250.136719 151.3125c-6.605469-4.4375-12.714844-9.574219-18.226563-15.3125h-183.910156v216h352v-188.992188c-20.21875 8.667969-42.003906 13.089844-64 12.992188h-.71875l-96 42.128906c-1.011719.4375-2.101562.667969-3.203125.671875-2.617187-.003906-5.070313-1.292969-6.5625-3.445312-1.488281-2.152344-1.832031-4.902344-.914063-7.355469zm-98.136719.6875c22.089844 0 40 17.910156 40 40s-17.910156 40-40 40-40-17.910156-40-40c.027344-22.082031 17.917969-39.972656 40-40zm72 184h-144v-56c.027344-22.082031 17.917969-39.972656 40-40h64c22.082031.027344 39.972656 17.917969 40 40zm0 0"/><path d="m448 80c0-44.113281-50.238281-80-112-80s-112 35.886719-112 80c0 23.566406 14.601562 45.878906 40.046875 61.222656 3.316406 1.996094 4.726563 6.078125 3.351563 9.699219l-17.0625 44.886719 80.0625-35.136719c1.011718-.4375 2.101562-.667969 3.203124-.671875h2.398438c61.761719 0 112-35.886719 112-80zm0 0"/>
+            </g>
+        </symbol>
+
+        <!-- 3-bolum-->
+        
+        <symbol id="portal" viewBox="-8 0 464 464"  >
+            <g>
+                <path d="m80 256c0 13.253906-10.746094 24-24 24s-24-10.746094-24-24 10.746094-24 24-24 24 10.746094 24 24zm0 0"/><path d="m128 408h320v16h-320zm0 0"/><path d="m144 440h288v24h-288zm0 0"/><path d="m206.414062 240-28.4375 128h199.609376l28.4375-128zm0 0"/><path d="m127.511719 368h34.464843c0-1.152344 3.160157-16 3.160157-16h-27.59375l-44.472657-48h-53.070312c-22.082031.027344-39.9726562 17.917969-40 40v104h88v-99.433594l-13.894531-15.160156 11.789062-10.8125zm0 0"/><path d="m400 24c0-13.253906-10.746094-24-24-24h-304c-13.253906 0-24 10.746094-24 24v112c0 13.253906 10.746094 24 24 24h56v55.351562l69.191406-55.351562h178.808594c13.253906 0 24-10.746094 24-24zm-256 96h-16v-16h16zm0-32h-16v-16h16zm0-32h-16v-16h16zm176 64h-160v-16h160zm0-32h-160v-16h160zm0-32h-160v-16h160zm0 0"/>
+            </g>
+        </symbol>
+
+        <!-- 4-bolum-->
+        
+        <symbol id="online.edu" viewBox="0 0 512 512" >
+            <g>
+                <path d="m241 197.976562 47.960938-31.976562-47.960938-31.976562zm0 0"/><path d="m497 60c8.289062 0 15-6.710938 15-15s-6.710938-15-15-15h-226v-15c0-8.289062-6.710938-15-15-15s-15 6.710938-15 15v15h-226c-8.289062 0-15 6.710938-15 15s6.710938 15 15 15h15v271h-15c-8.289062 0-15 6.710938-15 15s6.710938 15 15 15h47.519531c-.992187-4.847656-1.519531-9.863281-1.519531-15 0-41.351562 33.648438-75 75-75 24.621094 0 46.316406 12.085938 60 30.464844 13.683594-18.378906 35.378906-30.464844 60-30.464844s46.316406 12.085938 60 30.464844c13.683594-18.378906 35.378906-30.464844 60-30.464844 41.351562 0 75 33.648438 75 75 0 5.136719-.527344 10.152344-1.519531 15h47.519531c8.289062 0 15-6.710938 15-15s-6.710938-15-15-15h-15v-271zm-172.679688 118.480469-90 60c-4.652343 3.097656-10.585937 3.328125-15.394531.746093-4.878906-2.605468-7.925781-7.691406-7.925781-13.226562v-120c0-5.535156 3.046875-10.621094 7.925781-13.226562 4.847657-2.625 10.78125-2.300782 15.394531.746093l90 60c4.175782 2.78125 6.679688 7.46875 6.679688 12.480469 0 5.007812-2.503906 9.695312-6.679688 12.480469zm0 0"/><path d="m181 346c0-24.8125-20.1875-45-45-45s-45 20.1875-45 45 20.1875 45 45 45 45-20.1875 45-45zm0 0"/><path d="m301 346c0-24.8125-20.1875-45-45-45s-45 20.1875-45 45 20.1875 45 45 45 45-20.1875 45-45zm0 0"/><path d="m181 466v31c0 8.289062 6.710938 15 15 15h120c8.289062 0 15-6.710938 15-15v-31c0-41.351562-33.648438-75-75-75s-75 33.648438-75 75zm0 0"/><path d="m421 346c0-24.8125-20.1875-45-45-45s-45 20.1875-45 45 20.1875 45 45 45 45-20.1875 45-45zm0 0"/><path d="m361 466v31c0 5.285156-1.082031 10.285156-2.761719 15h77.761719c8.289062 0 15-6.710938 15-15v-31c0-41.351562-33.648438-75-75-75-13.8125 0-26.601562 4.015625-37.730469 10.558594 14.019531 17.847656 22.730469 40.042968 22.730469 64.441406zm0 0"/><path d="m61 466v31c0 8.289062 6.710938 15 15 15h77.761719c-1.679688-4.714844-2.761719-9.714844-2.761719-15v-31c0-24.398438 8.710938-46.59375 22.730469-64.441406-11.128907-6.542969-23.917969-10.558594-37.730469-10.558594-41.351562 0-75 33.648438-75 75zm0 0"/>
+            </g>
+        </symbol>
+
+        <!-- 5-bolum-->
+        
+        <symbol id="kitepkana" viewBox="0 0 448 448.00024"  >
+            <g>
+                <path d="m448 344v-32h-448v32c0 4.417969 3.582031 8 8 8h432c4.417969 0 8-3.582031 8-8zm0 0"/><path d="m168 368h112v48h-112zm0 0"/><path d="m88 432h272v16h-272zm0 0"/><path d="m232 235.929688 39.519531-16.730469c4.933594-2.097657 10.238281-3.1875 15.601563-3.199219h96.878906v-216h-112c-22.082031.0273438-39.972656 17.917969-40 40zm0 0"/><path d="m8 48c-4.417969 0-8 3.582031-8 8v240h448v-240c0-4.417969-3.582031-8-8-8h-8v216h-145.441406c-3.230469 0-6.429688.652344-9.40625 1.914062l-49.953125 21.4375-3.199219 1.351563-3.144531-1.351563-50-21.4375c-2.976563-1.265624-6.179688-1.914062-9.414063-1.914062h-145.441406v-216zm0 0"/><path d="m161.28125 216c5.398438.003906 10.742188 1.09375 15.710938 3.199219l39.007812 16.679687v-195.878906c.003906-2.191406-.191406-4.378906-.582031-6.535156-3.113281-19.335938-19.832031-33.5312502-39.417969-33.464844h-112v216zm0 0"/><path d="m32 24v224h129.441406c5.398438.007812 10.738282 1.09375 15.710938 3.199219l46.847656 20.097656 46.839844-20.097656c4.972656-2.109375 10.320312-3.195313 15.71875-3.199219h129.441406v-224h-16v208h-112.878906c-3.226563.015625-6.417969.671875-9.386719 1.9375l-53.734375 22.757812-53.289062-22.78125c-2.984376-1.265624-6.191407-1.914062-9.429688-1.914062h-113.28125v-208zm0 0"/>
+            </g>
+        </symbol>
+
+
+
+
+
+
+
+    </svg>
+    
+        <!--HEADER-->
+        <header class="header">
+            <div class="cont1" >
+
+                <div class="fon1">
+                    <div class="fon1__icon">
+                        <img class="img" src="icon/icon.png" alt="A.Orozbekov №9">
+
+                        <div class="fon1__title">
+                            Абдыкадыр<br>
+                            Орозбеков<br>
+                            №9
+                        </div>
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a class="nav__menu" href="#">Башкы бет</a></li>
+                            <li><a class="nav__menu" href="#">Мектеп</a>
+                    
+                                <!-- первый уровень выпадающего списка -->
+                                <ul>
+                                    <li><a class="nav__menu" href="#">Ашкана</a></li>
+                                    <li><a class="nav__menu" href="#">Спорт зал</a></li>
+                                    <li><a class="nav__menu" href="#">Концерттик зал</a></li>
+                                </ul>
+                    
+                            </li>
+                            <li><a class="nav__menu " href="#">Мугалим</a>
+                                <!-- первый уровень выпадающего списка -->
+                                <ul>
+                                    <li><a class="nav__menu" href="#">1-4 класс</a></li>
+                                    <li><a class="nav__menu" href="#">5-8 класс</a></li>
+                                    <li><a class="nav__menu" href="#">9-11 класс</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__menu" href="#">Окуучу</a>
+                                <!-- первый уровень выпадающего списка -->
+                                <ul>
+                                    <li><a class="nav__menu" href="#">1-4 класс</a></li>
+                                    <li><a class="nav__menu" href="#">5-11 класс</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__menu" href="#">Бүтүрүүчү</a>
+                                <!-- первый уровень выпадающего списка -->
+                                <ul>
+                                    <li><a class="nav__menu" href="#">9-класс</a></li>
+                                    <li><a class="nav__menu" href="#">11-класс</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__menu" href="#">Контакт</a>
+                                <!-- первый уровень выпадающего списка -->
+                                <ul>
+                                    <li><a class="nav__menu" href="whatsapp://send?text=Ассалоому Алейкум, Мен Сайт боюнча кайрылып жаткам, Менин атым : &phone=+996776765974">WhatsApp</a></li>
+                                    <li><a class="nav__menu" href="#">Почта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="lang" href="#">Кыр</a>
+                            </li>
+                            <li>
+                                <a class="lang1" href="proba — копия.html">Рус</a>
+                            </li>
+
+                        </ul>
+                            
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+        </header>
+    <!--/.HEADER-->
+
+    <div class="abcd"><!--abcd-->
+        <div class="cont"><!--cont-->
+
+
+            <div class="fon__11"> <!-- fon__11 -->
+        
+                <img class="fon__photo" src="img/fig1.png" alt="">
+            
+                <div class="fon__content">
+            
+                <div class="fon__title">
+                    абдыкадыр орозбеков<br> 
+                    менин сүйгөн мектебим!
+                </div>
+            
+                <div class="fon__text">
+                    <strong>окуу түндө алдындагы шам чырак<br> билим алсаң маңдай ачык жаркырап</strong>
+                </div>
+            
+                <div class="fon__text1">
+                    
+                    <strong>- Ар бир окуучунун аракетине ɵгɵчɵ маани берүү <br>жана күн сайын жаңы билимдер.</strong>
+                    <br>
+                    <br>
+                    <strong>- Мугалим менен 24 саат бою үзгүлтүксүз байланыш,<br> эстен кеткис саякат жана эс алуулар.</strong>
+                    <br>
+                    <br>
+                    <strong>- Мугалим жана окуучулар ортосундагы терең <br>сый-урмат жана ич ара билим алмашуу.</strong>
+                </div>
+            
+                </div>
+            </div> <!-- /fon__11 -->
+        
+        
+            <div class="fon__22"><!-- fon__22 -->
+        
+                <img width="219px" height="253px" class="fon22__photo" src="img/fig2.png" alt="">
+            
+                <div class="fon22__content">
+            
+                <div class="fon22__title">
+                    баткен облусу,<br> кадамжай району,<br> 
+                    кѳн айылы,<br> 
+                    а. орозбеков №9-орто<br>
+                    мектеби
+                </div>
+            
+                </div>
+            </div><!-- /fon__22 -->
+
+            
+        </div><!--/.cont-->
+    </div><!--/abcd-->
+
+
+
+
+
+
+
+
+    <div class="abcd1"> <!-- abcd1 -->
+        <div class="cont2"> <!--cont2-->
+            <div class="bolumdor">
+
+                <!-- 1 -->
+                <div class="bolumdor__item">
+                    <div class="icon">
+
+                        <a class="icon__item" href="#" target="_blank">
+                            <svg class="icon__icon1">
+                                <use xlink:href="#mektep">
+                                </use>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="bolumdor__content">
+
+                        <div class="bolumdor__title">
+                                Кабыл алуу
+                        </div>
+        
+                    </div>
+                </div>
+            
+            </div> 
+
+
+            <div class="bolumdor">
+
+                <!-- 2 -->
+                <div class="bolumdor__item">
+                    <div class="icon">
+
+                        <a class="icon__item" href="#" target="_blank">
+                            <svg class="icon__icon1">
+                                <use xlink:href="#okuuchu">
+                                </use>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="bolumdor__content">
+
+                        <div class="bolumdor__title">
+                            Окуучулар
+                            жаматы
+                        </div>
+        
+                    </div>
+                </div>
+            
+            </div> 
+
+            <div class="bolumdor">
+
+                <!-- 3 -->
+                <div class="bolumdor__item">
+                    <div class="icon">
+
+                        <a class="icon__item" href="#" target="_blank">
+                            <svg class="icon__icon1">
+                                <use xlink:href="#portal">
+                                </use>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="bolumdor__content">
+
+                        <div class="bolumdor__title">
+                            Портал
+                        </div>
+        
+                    </div>
+                </div>
+            
+            </div> 
+
+            <div class="bolumdor">
+
+                <!-- 4 -->
+                <div class="bolumdor__item">
+                    <div class="icon">
+
+                        <a class="icon__item" href="#" target="_blank">
+                            <svg class="icon__icon1">
+                                <use xlink:href="#online.edu">
+                                </use>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="bolumdor__content">
+
+                        <div class="bolumdor__title">
+                            Онлайн
+                            сабактар
+                        </div>
+        
+                    </div>
+                </div>
+            
+            </div> 
+
+            <div class="bolumdor">
+
+                <!-- 5 -->
+                <div class="bolumdor__item">
+                    <div class="icon">
+
+                        <a class="icon__item" href="#" target="_blank">
+                            <svg class="icon__icon1">
+                                <use xlink:href="#kitepkana">
+                                </use>
+                            </svg>
+                        </a>
+
+                    </div>
+                    <div class="bolumdor__content">
+
+                        <div class="bolumdor__title">
+                            Китепкана
+                        </div>
+        
+                    </div>
+                </div>
+            
+            </div> 
+
+        </div> <!-- /cont2 -->
+    </div><!-- /abcd1 -->
+
+    <div class="kg1">
+        БҮГҮНКҮ КҮН
+    </div>
+
+    <div class="word"> <!--WORD START-->
+        <div class="cont3"> <!--cont3-->
+
+            <!-- ONE -->
+
+            <div class="ugol"><!-- fon__22 -->
+        
+                <img class="ugol__img" src="img/01fig2.png" alt="">
+
+                <div class="ugol__content1">
+
+                                    <!-- 567890 -->
+
+                        <!--digital clock start-->
+                    <div class="datetime">
+                        <div class="date">
+                        <span id="dayname">Day</span>,
+                        <span id="month">Month</span>
+                        <span id="daynum">00</span>,
+                        <span id="year">Year</span>
+                        </div>
+                        <div class="time">
+                        <span id="hour">00</span>:
+                        <span id="minutes">00</span>:
+                        <span id="seconds">00</span>
+                        <!-- <span id="period">AM</span> -->
+                        </div>
+                    </div>
+                    <!--digital clock end-->
+                
+                    <script type="text/javascript">
+                    function updateClock(){
+                        var now = new Date();
+                        var dname = now.getDay(),
+                            mo = now.getMonth(),
+                            dnum = now.getDate(),
+                            yr = now.getFullYear(),
+                            hou = now.getHours(),
+                            min = now.getMinutes(),
+                            sec = now.getSeconds(),
+                            pe = "AM";
+                
+                            if(hou >= 12){
+                            pe = "PM";
+                            }
+                            if(hou == 0){
+                            hou = 24;
+                            }
+                            if(hou > 23){
+                            hou = 0;
+                            }
+                
+                            Number.prototype.pad = function(digits){
+                            for(var n = this.toString(); n.length < digits; n = 0 + n);
+                            return n;
+                            }
+                
+                            var months = ["Январь", "Февраль", "Март", "Арель", "Май", "Июнь", "Июль", "Августь", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+                            var week = ["Жекшемби ", "Дүйшɵмбү ", "Шейшемби", "Шейшемби ", "Бейшемби ", "Жума ", "Ишемби  "];
+                            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds"];
+                            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+                            for(var i = 0; i < ids.length; i++)
+                            document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+                    }
+                
+                    function initClock(){
+                        updateClock();
+                        window.setInterval("updateClock()", 1);
+                    }
+                    </script>
+
+                        <!-- квеаошщ -->
+
+                    <div id="current_date_time_block2"></div>
+                   
+                    <div class="works__text">
+                        <img src="/css/ggggg.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="ugol__content">
+            
+                    <div class="ugol__title">
+                        <!--pogoda-->
+                        <div class="clock">
+                            <div class="hour">
+                                <div class="hr" id="hr"></div>
+                            </div>
+                            <div class="min">
+                                <div class="mn" id="mn"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="sc" id="sc"></div>
+                            </div>
+                        </div>
+                        <script src="script.js"></script>
+                        <!--/pogoda-->
+                    </div>
+
+                </div>
+            </div><!-- /fon__22 -->
+
+            <!-- /ONE -->
+
+
+            <!-- TWO -->
+            <div class="ugol"><!-- fon__22 -->
+        
+                <img class="ugol__img" src="img/01fig2.png" alt="">
+
+                <div class="ugol__content1">
+
+                        <!-- 567890 -->
+
+                        Бул жерде азырынча эч нерсе жок
+                        <!-- квеаошщ -->
+
+                    
+                </div>
+                <div class="ugol__content">
+            
+                    <div class="ugol__title">
+                        <!--pogoda-->
+                        Майрамдар
+                        <!--/pogoda-->
+                    </div>
+
+                </div>
+            </div><!-- /fon__22 -->
+            <!-- /TWO -->
+
+            <!-- THREE -->
+            <div class="ugol"><!-- fon__22 -->
+        
+                <img class="ugol__img" src="img/01fig2.png" alt="">
+                <div class="ugol__content1">
+
+                        <!-- 567890 -->
+
+                        Бул жерде азырынча эч нерсе жок
+                        <!-- квеаошщ -->
+
+                    
+                </div>
+                <div class="ugol__content">
+            
+                    <div class="ugol__title">
+                        <!--pogoda-->
+                        Иш-чааралар
+                        <!--/pogoda-->
+                    </div>
+
+                </div>
+            </div><!-- /fon__22 -->
+            <!-- /THREE -->
+
+            <!-- FOUR -->
+            <div class="ugol"><!-- fon__22 -->
+        
+                <img class="ugol__img" src="img/01fig2.png" alt="">
+                
+                <div class="ugol__content1">
+
+                        <!-- 567890 -->
+
+                        Бул жерде азырынча эч нерсе жок
+                        <!-- квеаошщ -->
+
+                    
+                </div>
+                <div class="ugol__content">
+            
+                    <div class="ugol__title">
+                        <!--pogoda-->
+                        Жарыя
+                        <!--/pogoda-->
+                    </div>
+
+                </div>
+            </div><!-- /fon__22 -->
+            <!-- /FOUR -->
+
+
+            
+        </div><!--CONT3-->
+
+    </div><!--/WORS-->
+
+    <div class="kg1">
+        ЖАҢЫЛЫКТАР
+    </div>
+
+    <div class="word8"> <!--NEWS START-->
+        <div class="cont38"> <!--cont3-->
+
+            <!-- FOUR -->
+            <div class="ugol8"><!-- fon__22 -->
+        
+                <img class="ugol__img8" src="img/aleya.jpg" alt="">
+                
+                <div class="ugol__content18">
+
+                        <!-- 567890 -->
+                        <h3>Аллея</h3><br>
+                        Аллея - мектептин батыш тарабына курулган жана 36 гүлдүн 
+                        түрү ɵстүрүлɵт. Окуучулардын ар жума сайын, ишембилик
+                        иш чаарасы боюнча,бүгүн да гүлдɵрдүн асты
+                        жумшатылып, суу куюлуп кам кɵрүлдү.
+                        <!-- квеаошщ -->
+
+                    
+                </div>
+                <div class="ugol__content8">
+            
+                    <div class="ugol__title8">
+                        <!--pogoda-->
+                        
+                        <!--/pogoda-->
+                    </div>
+
+                </div>
+            </div><!-- /fon__22 -->
+            <!-- /FOUR -->
+
+
+
+
+                <!-- FOUR -->
+                <div class="ugol8"><!-- fon__22 -->
+                        
+                    <img class="ugol__img8" src="img/aleya.jpg" alt="">
+                    
+                    <div class="ugol__content18">
+
+                            <!-- 567890 -->
+                        <h3>Аллея</h3><br>
+                        Аллея - мектептин батыш тарабына курулган жана 36 гүлдүн 
+                        түрү ɵстүрүлɵт. Окуучулардын ар жума сайын, ишембилик
+                        иш чаарасы боюнча,бүгүн да гүлдɵрдүн асты
+                        жумшатылып, суу куюлуп кам кɵрүлдү.
+                        <!-- квеаошщ -->
+
+                        
+                    </div>
+                    <div class="ugol__content8">
+
+                        <div class="ugol__title8">
+                            <!--pogoda-->
+                            
+                            <!--/pogoda-->
+                        </div>
+
+                    </div>
+                </div><!-- /fon__22 -->
+                <!-- /FOUR -->
+
+
+            
+        </div><!--CONT3-->
+
+    </div><!--/NEWS END-->
+
+
+    <div class="CONTAC"> <!--WORD START-->
+        <div class="CONTAC__1"> <!--cont3-->
+
+            <div class="CONTAC__title">
+                <h1>Контакт</h1>
+                
+            </div>
+            <div class="CONTAC__name">
+                
+                <h2>А.Орозбеков №9- орто мектеби</h2>
+            </div>
+
+            <div class="belgi"> 
+      
+                <img class="belgi__icon" src="icon/adres.png" alt="">
+                
+                <div class="belgi__word">
+                    Баткен, Кадамжай, Кɵн, 14
+                </div>
+
+
+            </div>
+            
+        </div><!--CONT3-->
+
+    </div><!--/WORS-->
+    
+
+
+
+
+
+
+
 </body>
 </html>

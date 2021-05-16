@@ -1,0 +1,80 @@
+/* WORKS */
+
+
+.fon__11{
+    width: 600px;
+    height: 580px;
+
+
+    position: relative;
+    overflow: hidden;
+
+}
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+.fon__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.fon__11 {
+    transition: 1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.fon__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    /* text-align: center; */
+    margin-left: 58px;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+.fon__title{
+    width: 500px;
+    margin-bottom: 5px; /* astyndagy mn ortosundagy alaralyk*/
+    font: 34px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.fon__text{
+    width: 500px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.fon__text1{
+    width: 500px;
+    color: #fff;
+    font-size: 18px;
+    /* text-transform: uppercase; */
+}
+
+/* ===== /.WORKS ====== */

@@ -1,0 +1,1128 @@
+body{
+    margin: 0%;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    color: #0059ff;
+    
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 10px /*Сверху*/ 0 /*Справа*/ 10px /*Снизу*/ 0; /*Слева*/
+}
+/* Container ========*/
+.abcd{
+    display: flex;
+    height: 540px;
+    flex-direction: column;
+    justify-content: center;
+    
+    background: #b825c1 url(5.jpg) center /cover;
+}
+.abcd1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background: #ffffff url(1knn.jpg) center /cover;
+}
+
+.cont{
+
+    display: flex;
+    width: 100%;
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 0 15px ;
+
+}
+
+.cont2{
+
+    display: flex;
+    width: 100%;
+    height: 150px;
+    max-width: 1117px;
+    margin: 0 auto;
+    padding: 0 15px ;
+    justify-content: center;
+
+}
+
+
+
+
+.cont1{
+    display: flex;
+    width: 100%;
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 0 15px ;
+    height: 84px;
+}
+
+
+/* Header ========*/
+
+.header{
+    width: 100%;
+    height: 84px;
+    
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #222B45;
+
+}
+
+.fon1__icon .img{
+    width: 100px;
+    height: 90px;
+}
+
+
+
+
+.fon1{
+    justify-content: space-between; /*iconkany solgo? menunu aon jakka kylat*/
+    width: 100%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 35px, 0;
+    height: 84px;
+}
+
+.fon1__icon{
+    display: flex;
+    align-items: center;
+
+}
+
+.img{
+
+    width: 100px;
+    height: 100px;
+}
+
+
+.fon1__title{
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    /* flex-direction: column;  */
+    /* Text&Elementti vertikaldan sentrga teneit */
+    /* justify-content: center; */
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    /* margin-top: 15px;
+    margin-bottom: 10px; */
+    font-size: 20px;
+}
+
+body, .fon{
+    margin: 0 ;
+}
+
+
+/* .container{
+    width: 100%;
+    max-width: 1115px;
+    height: 84px;
+    margin: 0 auto;
+    padding: 0 15px ;
+    
+} */
+
+
+/* ========= figura ============*/
+
+/* ========= /figura ============*/
+
+
+
+
+
+/* menu */
+
+/* задаем цвет фона для контейнера nav. */
+nav {
+    margin: 100px 0;
+
+}
+
+/* убираем отступы и поля, а также list-style для "ul", 
+ * и добавляем "position:relative" */
+nav ul {
+    display: flex;
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    
+    }
+
+/* применяем inline-block позиционирование к элементам навигации */
+nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    
+    }
+
+/* стилизуем ссылки */
+nav .nav__menu {
+    display:block;
+    padding:0 10px;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration:none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav .lang {
+    display:block;
+    padding:0 2px;
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration:none;
+    margin-left: 40px;
+    margin-right: 5px;
+    background-color: rgb(187, 189, 189);
+    border-radius: 50%;
+}
+nav .lang1 {
+    display:block;
+    padding:0 2px;
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration:none;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+
+/* изменяем цвет фона при наведении курсора */
+nav .nav__menu:hover {
+    color: #5C7CEF;
+}
+
+nav .lang1:hover{
+    background-color: rgb(187, 189, 189);
+    border-radius: 50%;
+    color: black;
+    transition: .5s;
+}
+
+
+
+/* скрываем выпадающие списки по умолчанию
+			 * и задаем абсолютное позиционирование */
+             nav ul ul {
+			    display: none;
+			    position: absolute;
+			    top: 100%;
+			}
+			
+			/* отображаем выпадающий список при наведении */
+			nav ul li:hover > ul {
+			    display:inherit;
+                margin-top: 0rem;
+                background-color: #086ece81;
+
+			}
+			
+			/* первый уровень выпадающего списка */
+			nav ul ul li {
+			    min-width:140px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
+			}
+
+
+/* ========= fon__1 ============*/
+
+.fon__1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+    padding-top: 100px;
+    padding: 100px;
+    
+    background: #b825c1 url(фон1.1.jpg) center /cover;
+}
+
+
+/* .fig1{
+    width: 600px;
+    height: 580px;
+    margin-top: 58px;
+    margin-left: -100px;
+}
+
+.fig2{
+    width: 219px;
+    height: 253px;
+    margin-top: 20px;
+    margin-left: 361px;
+} */
+
+/* ========= /fon__1 ============*/
+/* WORKS */
+.fon__photo{
+    position: absolute;
+    width: 510px;
+    height: 500px;
+}
+
+.fon__11{
+    width: 510px;
+    height: 500px;
+    
+    margin-left: -105px;
+    margin-top: 85px;
+    
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;; */
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+/* .fon__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+} */
+
+.fon__11 {
+    transition: 1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.fon__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    /* text-align: center; */
+    margin-left: 50px;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+.fon__title{
+    width: 500px;
+    margin-bottom: 20px; /* astyndagy mn ortosundagy alaralyk*/
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.fon__text{
+    width: 500px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.fon__text1{
+    width: 500px;
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 15px;
+    /* text-transform: uppercase; */
+}
+
+/* ===== /.WORKS ====== */
+
+
+
+
+/* WORKS */
+
+
+.fon__22{
+    width: 240px;
+    height: 253px;
+
+    margin-top: 380px;
+    margin-left: 450px;
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;; */
+
+    position: relative;
+    overflow: hidden;
+
+}
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+/* .fon__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+} */
+
+.fon__22 {
+    transition: 1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.fon22__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+.fon22__title{
+    width: 219px;
+    margin-top: 17px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+/* ===== /.WORKS ====== */
+
+
+/* ===== /.FON__1 ====== */
+
+
+
+
+/* ===== .FON__2 ====== */
+
+/* .bolum{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding: 35px, 0;
+    height: 600px;
+} */
+
+
+.fon__2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 690px;
+    padding-top: 100px;
+    padding: 100px;
+    
+    background: #b825c1 url(фон1.1.jpg) center /cover;
+}
+
+
+
+/* ABCD1 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bolumdor */
+
+
+
+.bolumdor{
+    
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 30px;
+    
+
+}
+
+
+.bolumdor__item{
+
+    width: 190px;
+    height: 70px;
+
+    background-color: #222B45;
+    border-radius: 5%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 25px;
+
+}
+.bolumdor__item:hover {
+    background-color: #1D51D8;
+}
+.bolumdor__item:hover .icon__icon1{
+    fill: white;
+}
+
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+/* .bolumdor__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+} */
+
+.bolumdor__item {
+    transition: .1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.bolumdor__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+.bolumdor__title{
+    margin-bottom: 5px; /* astyndagy mn ortosundagy alaralyk*/
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+
+    margin-left: 75px;
+}
+
+/* .works__text{
+    color: #fff;
+    text-transform: uppercase;
+} */
+/* ===== /.WORKS ====== */
+
+
+.icon__icon1{
+    display: block;
+    height: 40px;
+    fill: #2c83e7
+}
+
+.icon__icon1{
+    transition: fill .1s linear;
+}
+
+
+
+
+/* /ABCD1 */
+
+.icon{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+.icon__item{
+    margin-bottom: 5px; 
+    margin-left: -115px;
+
+}
+
+
+/* 234567890 */
+.cont3{
+
+    display: flex;
+    width: 100%;
+    height: 400px;
+    max-width: 1117px;
+    margin: 0 auto;
+    padding: 0 15px ;
+    justify-content: center;
+
+}
+.word{
+    color: #000000;
+    font-family: Roboto;
+    font-size: 36px;
+}
+
+
+
+/* 6 ugol */
+
+.kg1{
+    text-align: center;
+    color: #000000;
+    font-family: Roboto;
+    font-size: 36px;
+}
+.ugol__img{
+    width: 240px;
+    height: 280px;
+}
+.ugol{
+    width: 240px;
+    height: 280px;
+    margin-left: 30px;
+    margin-top: 62px;
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;; */
+
+    position: relative;
+    overflow: hidden;
+
+}
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+/* .fon__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+} */
+
+.ugol {
+    transition: 1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.ugol__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+.ugol__text{
+    position: absolute;
+    z-index: 100;
+}
+
+
+.ugol__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    opacity: 1;
+}
+.ugol .ugol__content:hover > .ugol__title {
+    opacity: 0;
+}
+
+.ugol:hover > .ugol__content1{
+    opacity: 1;
+}
+
+
+
+
+
+
+/* /6ugol */
+
+
+.ugol__content1{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+
+.works__title{
+    margin-bottom: 5px; /* astyndagy mn ortosundagy alaralyk*/
+    font: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.works__text{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.works__text1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+.works__content{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 91, 218, 0.808); */
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+/* енмпготлд */
+
+.datetime{
+    color: #fff;
+    /* background: #10101E; */
+    font-family: "Segoe UI", sans-serif;
+    width: 100%;
+    padding: 15px 10px;
+    /* border: 3px solid #2E94E3; */
+    /* border-radius: 5px; */
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+  }
+  
+  .datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+  }
+  
+  .date{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .time{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  /* .time span:last-child{
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+  } */
+
+/* аспмрл */
+
+/* WORS END */
+
+/* NEWS START */
+.news__info{
+    display: flex;
+    flex-wrap: wrap;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    align-items: center;
+}
+.news__1{
+    display: flex;
+
+    width: 600px;
+    height: 200px;
+}
+
+.asd{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* UGOL8 */
+
+.cont38{
+
+    display: flex;
+    width: 100%;
+    height: 400px;
+    max-width: 1117px;
+    margin: 0 auto;
+    padding: 0 15px ;
+    justify-content: center;
+
+}
+
+.ugol__img8{
+    width: 480px;
+    height: 300px;
+}
+.ugol8{
+    width: 480px;
+    height: 300px;
+    margin-left: 35px;
+    margin-top: 62px;
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;; */
+
+    position: relative;
+    overflow: hidden;
+
+}
+/* .works__item:hover .works__content{
+    opacity: 1;
+} */
+
+/* .fon__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+} */
+
+.ugol8 {
+    transition: 1s; /* Время эффекта */
+   }
+/* .works__item:hover {
+    transform: scale(1.03); /* Увеличиваем масштаб 
+   } */
+
+.ugol__content8{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+.ugol__text8{
+    position: absolute;
+    z-index: 100;
+}
+
+
+.ugol__title8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    opacity: 1;
+}
+.ugol8 .ugol__content8:hover > .ugol__title8 {
+    opacity: 0;
+}
+
+.ugol8:hover > .ugol__content18{
+    opacity: 1;
+}
+
+
+
+
+
+
+/* /6ugol */
+
+
+.ugol__content18{
+    display: flex;
+
+    /* ar bir jazylgan elementti kiinki katarga tushurot */
+    flex-direction: column; 
+    /* Text&Elementti vertikaldan sentrga teneit */
+    justify-content: center;
+    /* Text&Elementti vertikaldan sentrga teneit */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+    /* background-color: rgba(12, 21, 34, 0.808); */
+    background-color: rgba(12, 21, 34, 0.808);
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+
+    transition: opacity .2s linear;
+    
+}
+
+/* /UGOL8 */
+
+/* CONTAC */
+.CONTAC{
+    width: 100%;
+    height: 300px;
+    
+    /* border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;; */
+    background-color: #222B45;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.CONTAC {
+    transition: 1s; /* Время эффекта */
+   }
+.CONTAC__1{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 300px;
+    max-width: 1117px;
+    margin: 0 auto;
+    padding: 0 15px ;
+}
+
+.CONTAC__title{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+.CONTAC__name{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.belgi{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.belgi__icon{
+
+    display: flex;
+    margin-top: 30px;
+    width: 41px;
+    height: 44px;
+}
+.belgi__word{
+    display: flex;
+    width: 100%;
+}
+/* ===  /CONTAC  ====*/
