@@ -1,0 +1,319 @@
+/* 2 */
+.slider {
+	position: relative;
+	width: 100%;
+	background: #2c3e50;
+	/* darckblue */
+
+}
+
+.myslide {
+
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	background: #4cc912;
+	width: 100%;
+	height: 500px;
+	display: none;
+	overflow: hidden;
+}
+
+
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+	color: #00a7ff;
+	/* blue */
+}
+
+.next {
+	right: 0;
+}
+
+.dotsbox {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+
+.dot {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+
+}
+
+/* /2 */
+
+/* javascript */
+.active,
+.dot:hover {
+	border-color: #00a7ff;
+	/* blue */
+}
+
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+
+	animation-name: fade;
+	animation-duration: 1.5s;
+
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.2
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.2
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+/* /muslide add fade */
+
+/* 3 */
+.txt {
+
+	letter-spacing: 2px;
+
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+
+	text-align: center;
+	align-items: center;
+
+
+	position: absolute;
+
+	/* transform: translate(0%, 0%); */
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+}
+
+.uu {
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	max-width: 1170px;
+
+	color: #fff;
+
+
+
+
+}
+
+/* 4 */
+.myslide .fade img{
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 40s;
+  	animation-name: zoomin;
+  	animation-duration: 40s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.5, 1.5);}
+}
+
+
+.txt h1 {
+	color: #00a7ff;
+	/* blue */
+	font-size: 55px;
+
+}
+
+.txt p {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.txt a {
+	font-size: 12px;
+}
+
+/* /3 */
+
+/* 4 */
+.myslide .fade img {
+	transform: scale(1.5, 1.5);
+	-webkit-animation-name: zoomin;
+	-webkit-animation-duration: 40s;
+	animation-name: zoomin;
+	animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin {
+	from {
+		transform: scale(1, 1);
+	}
+
+	to {
+		transform: scale(1.5, 1.5);
+	}
+}
+
+
+@keyframes zoomin {
+	from {
+		transform: scale(1, 1);
+	}
+
+	to {
+		transform: scale(1.5, 1.5);
+	}
+}
+
+/* Button
+===================*/
+
+.btn {
+
+	margin: 20px 10px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 7px 30px;
+
+	border-radius: 2px;
+	border: 0;
+	cursor: pointer;
+
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+
+
+	transition: background .5s linear;
+}
+
+@-webkit-keyframes posi {
+	from {top: -10%;}
+	to {top: 0%;}
+  }
+
+  @keyframes posi {
+	from {top: -10%;}
+	to {top: 0%;}
+  }
+
+.btn--red {
+	border-radius: 47px;
+	font-weight: bold;
+
+	border: 2px solid #4cc912;
+
+}
+
+.btn--red:hover {
+	color: #000000;
+	background-color: #34dd59;
+	font-weight: bold;
+}
+
+
+
+/* Responsive code start */
+@media screen and (max-width: 540px) {
+
+	.myslide{height: 250px;}
+
+	.txt h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	.uu p {
+		font-size: 30px;
+	}
+
+	.prev,
+	.next {
+		font-size: 25px;
+	}
+
+	.uu .btn {
+		font-size: 10px;
+	}
+
+}
+
+@media screen and (max-width: 440px) {
+
+
+	.txt h1 {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	.uu p {
+		font-size: 20px;
+	}
+
+	.uu .btn {
+		font-size: 8px;
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+	}
+
+	.btn {
+		padding: 4px 15px;
+	}
+
+}
